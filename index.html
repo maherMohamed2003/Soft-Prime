@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soft Prime — Solutions. Innovation. Excellence.</title>
+<meta name="description" content="Soft Prime builds custom business systems, Arabic RTL dashboards and websites for shops, clinics, gyms and companies.">
+<link rel="icon" href="assets/images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body{background:var(--ink); overflow:hidden;}
+</style>
+</head>
+<body>
+
+<div class="loader-screen" id="loaderScreen">
+  <div class="loader-mark">
+    <div class="loader-slash"></div>
+    <img src="assets/images/brand/logo-icon.png" alt="Soft Prime">
+  </div>
+  <div class="loader-word">SOFT PRIME</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+  <div class="loader-pct" id="loaderPct">INITIALIZING SYSTEM · 0%</div>
+  <a href="home/index.html" class="loader-enter" id="loaderEnter">ENTER SITE →</a>
+</div>
+
+<script>
+  const bar = document.getElementById('loaderBar');
+  const pct = document.getElementById('loaderPct');
+  const enter = document.getElementById('loaderEnter');
+  const screen = document.getElementById('loaderScreen');
+  let p = 0;
+  const timer = setInterval(()=>{
+    p += Math.random()*14 + 6;
+    if(p >= 100){
+      p = 100;
+      clearInterval(timer);
+      pct.textContent = 'SYSTEM READY · 100%';
+      bar.style.width = '100%';
+      enter.classList.add('show');
+      setTimeout(()=>{
+        screen.classList.add('loader-fadeout');
+        setTimeout(()=>{ window.location.href = 'home/index.html'; }, 650);
+      }, 550);
+      return;
+    }
+    bar.style.width = p + '%';
+    pct.textContent = 'INITIALIZING SYSTEM · ' + Math.floor(p) + '%';
+  }, 180);
+
+  // respect users who prefer reduced motion / avoid trapping them
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    clearInterval(timer);
+    window.location.href = 'home/index.html';
+  }
+</script>
+</body>
+</html>

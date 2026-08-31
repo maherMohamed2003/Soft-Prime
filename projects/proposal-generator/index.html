@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal Generator — Soft Prime Projects</title>
+<meta name="description" content="Soft Prime's own internal tool for writing client price proposals — line by line, with automatic totals and clean PDF export. It's the same tool used ">
+<link rel="icon" href="../../assets/images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+<div class="grain"></div>
+<div class="scroll-beam"></div>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="../../home/index.html" class="brand">
+      <img src="../../assets/images/brand/logo-icon.png" alt="Soft Prime">
+      <span>SOFT PRIME<span class="sub" data-en="SOLUTIONS · INNOVATION · EXCELLENCE" data-ar="حلول · ابتكار · تميز">SOLUTIONS · INNOVATION · EXCELLENCE</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../../home/index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="../../about/index.html" data-en="About" data-ar="من نحن">About</a>
+      <a href="../../services/index.html" data-en="Services" data-ar="خدماتنا">Services</a>
+      <a href="../../projects/index.html" class="active" data-en="Projects" data-ar="أعمالنا">Projects</a>
+      <a href="../../process/index.html" data-en="Process" data-ar="آلية العمل">Process</a>
+      <a href="../../contact/index.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button data-lang="en">EN</button>
+        <button data-lang="ar">AR</button>
+      </div>
+      <a href="https://wa.me/201145466800" target="_blank" class="btn btn-primary" style="padding:10px 18px;font-size:12px;">
+        <span data-en="Let's Talk" data-ar="تواصل الآن">Let's Talk</span>
+      </a>
+      <div class="nav-burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="../../home/index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+  <a href="../../about/index.html" data-en="About" data-ar="من نحن">About</a>
+  <a href="../../services/index.html" data-en="Services" data-ar="خدماتنا">Services</a>
+  <a href="../../projects/index.html" class="active" data-en="Projects" data-ar="أعمالنا">Projects</a>
+  <a href="../../process/index.html" data-en="Process" data-ar="آلية العمل">Process</a>
+  <a href="../../contact/index.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+</div>
+
+<section class="hero" style="min-height:52vh; padding-bottom:10px;">
+  <div class="hero-glow g1"></div>
+  <div class="hero-slash s1"></div>
+  <div class="container hero-content" style="max-width:900px;">
+    <div class="proj-hero-head">
+      <div>
+        <div class="eyebrow" data-en="INTERNAL SALES TOOL" data-ar="أداة مبيعات داخلية">INTERNAL SALES TOOL</div>
+        <h1 style="font-size:clamp(30px,5vw,52px);" data-en="Proposal Generator" data-ar="مولّد عروض الأسعار">Proposal Generator</h1>
+      </div>
+      <a href="../index.html" class="btn btn-ghost" style="white-space:nowrap;">
+        <span data-en="← All Projects" data-ar="→ كل المشاريع">← All Projects</span>
+      </a>
+    </div>
+    <p class="lead" style="margin-top:22px; max-width:720px;" data-en="Soft Prime's own internal tool for writing client price proposals — line by line, with automatic totals and clean PDF export. It's the same tool used to price the very systems on this page." data-ar="الأداة الداخلية الخاصة بـ Soft Prime لكتابة عروض الأسعار للعملاء — بند ببند، بإجمالي أوتوماتيكي وتصدير PDF نظيف. هي نفس الأداة اللي استخدمناها في تسعير الأنظمة الموجودة في الصفحة دي.">Soft Prime's own internal tool for writing client price proposals — line by line, with automatic totals and clean PDF export. It's the same tool used to price the very systems on this page.</p>
+    <div class="proj-hero-chips">
+      <span class="tag" data-en="Internal Business Ops" data-ar="عمليات داخلية">Internal Business Ops</span>
+      <span class="tag" data-en="Sales &amp; Documentation Tool" data-ar="أداة مبيعات ومستندات">Sales &amp; Documentation Tool</span>
+      <span class="tag">Arabic RTL</span>
+    </div>
+    <div class="proj-meta-panel">
+      <div class="proj-meta-item">
+        <span data-en="INDUSTRY" data-ar="المجال">INDUSTRY</span>
+        <b data-en="Internal Business Ops" data-ar="عمليات داخلية">Internal Business Ops</b>
+      </div>
+      <div class="proj-meta-item">
+        <span data-en="TYPE" data-ar="النوع">TYPE</span>
+        <b data-en="Sales &amp; Documentation Tool" data-ar="أداة مبيعات ومستندات">Sales &amp; Documentation Tool</b>
+      </div>
+      <div class="proj-meta-item">
+        <span data-en="LANGUAGE" data-ar="اللغة">LANGUAGE</span>
+        <b data-en="Arabic RTL" data-ar="عربي RTL">Arabic RTL</b>
+      </div>
+      <div class="proj-meta-item">
+        <span data-en="STATUS" data-ar="الحالة">STATUS</span>
+        <b style="color:var(--success);" data-en="Live" data-ar="قيد الاستخدام">Live</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="KEY FEATURES" data-ar="أبرز المميزات">KEY FEATURES</div>
+      <h2 data-en="What the system does" data-ar="النظام بيعمل ايه">What the system does</h2>
+    </div>
+    <div class="feature-list">
+      <div class="feature-item reveal">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div>
+          <h4 data-en="Line-Item Pricing" data-ar="تسعير بند ببند">Line-Item Pricing</h4>
+          <p data-en="Add, edit or remove priced items with description, and see the total update instantly." data-ar="إضافة أو تعديل أو حذف بنود مسعّرة مع وصفها، والإجمالي بيتحدث فورًا.">Add, edit or remove priced items with description, and see the total update instantly.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <div>
+          <h4 data-html data-en="Client &amp; Proposal Tracking" data-ar="متابعة العملاء والعروض">Client &amp; Proposal Tracking</h4>
+          <p data-en="Every proposal linked to a client with a live status: sent, in progress or signed." data-ar="كل عرض سعر مربوط بعميل بحالة حية: مُرسل، تحت التنفيذ، أو موقّع.">Every proposal linked to a client with a live status: sent, in progress or signed.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <div>
+          <h4 data-en="One-Click PDF Export" data-ar="تصدير PDF بضغطة">One-Click PDF Export</h4>
+          <p data-en="Turn any proposal into a clean, client-ready PDF instantly." data-ar="تحويل أي عرض سعر لملف PDF نظيف وجاهز للعميل فورًا.">Turn any proposal into a clean, client-ready PDF instantly.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <h4 data-en="Stage Management" data-ar="إدارة مراحل التنفيذ">Stage Management</h4>
+          <p data-en="Track each proposal's stage from preparation to delivery." data-ar="متابعة مرحلة كل عرض من التجهيز لحد التسليم.">Track each proposal's stage from preparation to delivery.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h10a1 1 0 011 1v16l-6-3-6 3V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div>
+          <h4 data-en="Dashboard Overview" data-ar="نظرة عامة سريعة">Dashboard Overview</h4>
+          <p data-en="See accepted, pending and total proposals at a glance." data-ar="شوف العروض المقبولة والمعلقة والإجمالي بنظرة واحدة.">See accepted, pending and total proposals at a glance.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M3 16V7a1 1 0 011-1h9v10M3 16h13M3 16a2 2 0 104 0M13 16a2 2 0 104 0" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div>
+          <h4 data-en="Reusable Item Library" data-ar="مكتبة بنود قابلة لإعادة الاستخدام">Reusable Item Library</h4>
+          <p data-en="Save common line items once and reuse them across future proposals." data-ar="احفظ البنود المتكررة مرة واحدة واستخدمها في عروض تانية.">Save common line items once and reuse them across future proposals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" style="background:var(--ink-2);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="SCREENS" data-ar="لقطات من النظام">SCREENS</div>
+      <h2 data-en="A look inside the Proposal Generator" data-ar="لمحة من جوه مولّد العروض">A look inside the Proposal Generator</h2>
+      <p class="lead" style="margin-top:16px;" data-en="Click any screen to view it full-size." data-ar="اضغط على أي صورة عشان تشوفها بحجم كامل.">Click any screen to view it full-size.</p>
+    </div>
+    <div class="gallery-grid" data-images='["../../assets/images/projects/proposal-1.jpg", "../../assets/images/projects/proposal-2.jpg", "../../assets/images/projects/proposal-3.jpg", "../../assets/images/projects/proposal-4.jpg", "../../assets/images/projects/proposal-5.jpg"]'>
+      <div class="gallery-item reveal" data-index="0">
+        <img src="../../assets/images/projects/proposal-1.jpg" alt="Proposal Generator screenshot 1">
+        <div class="zoom-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="gallery-item reveal" data-index="1">
+        <img src="../../assets/images/projects/proposal-2.jpg" alt="Proposal Generator screenshot 2">
+        <div class="zoom-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="gallery-item reveal" data-index="2">
+        <img src="../../assets/images/projects/proposal-3.jpg" alt="Proposal Generator screenshot 3">
+        <div class="zoom-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="gallery-item reveal" data-index="3">
+        <img src="../../assets/images/projects/proposal-4.jpg" alt="Proposal Generator screenshot 4">
+        <div class="zoom-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+      </div>
+      <div class="gallery-item reveal" data-index="4">
+        <img src="../../assets/images/projects/proposal-5.jpg" alt="Proposal Generator screenshot 5">
+        <div class="zoom-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="proj-switch reveal">
+      <a href="../luka/index.html" class="prev">
+        <span data-en="← PREVIOUS PROJECT" data-ar="→ المشروع السابق">← PREVIOUS PROJECT</span>
+        <b data-en="Loka" data-ar="لوكا">Loka</b>
+      </a>
+      <a href="../delivery/index.html" class="next">
+        <span data-en="NEXT PROJECT →" data-ar="المشروع التالي ←">NEXT PROJECT →</span>
+        <b data-en="Al-Masar" data-ar="المسار">Al-Masar</b>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="cta-band reveal-scale">
+      <div class="hero-slash s1" style="right:12%;"></div>
+      <div class="eyebrow" style="justify-content:center;" data-en="LIKE WHAT YOU SEE?" data-ar="عجبك اللي شوفته؟">LIKE WHAT YOU SEE?</div>
+      <h2 data-en="Let's build something like this for you" data-ar="يلا نبنيلك حاجة زي كده">Let's build something like this for you</h2>
+      <div class="hero-cta" style="justify-content:center;">
+        <a href="https://wa.me/201145466800" target="_blank" class="btn btn-primary"><span class="shine"></span><span data-en="Chat on WhatsApp" data-ar="راسلنا واتساب">Chat on WhatsApp</span></a>
+        <a href="../../contact/index.html" class="btn btn-ghost"><span data-en="Contact Form" data-ar="نموذج التواصل">Contact Form</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../home/index.html" class="brand"><img src="../../assets/images/brand/logo-icon.png" alt="Soft Prime"><span>SOFT PRIME</span></a>
+        <p data-en="Custom systems and websites for shops, clinics, gyms and companies — built from scratch, built to last." data-ar="أنظمة ومواقع مخصصة للمحلات والعيادات والجيمات والشركات — مبنية من الصفر وهتدوم معاك.">Custom systems and websites for shops, clinics, gyms and companies — built from scratch, built to last.</p>
+        <div class="footer-social">
+          <a href="https://web.facebook.com/profile.php?id=61592198713971" target="_blank" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13.5 21v-7.5H16l.5-3.5h-3V8c0-1 .3-1.7 1.7-1.7H16.5V3.2C16.2 3.1 15.2 3 14 3c-2.4 0-4 1.5-4 4.2V10H7.5v3.5H10V21h3.5z" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/201145466800" target="_blank" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 8.6c.2-.5.6-.9 1.5-.9.4 0 .8.3 1 .7l.6 1.4c.1.3.1.6-.1.8l-.6.7c-.1.1-.1.3 0 .5.5.9 1.4 1.8 2.3 2.3.2.1.4.1.5 0l.7-.6c.2-.2.5-.2.8-.1l1.4.6c.4.2.7.6.7 1 0 .9-.4 1.3-.9 1.5-1 .4-2.3.2-4-1-1.4-1-2.4-2-3.4-3.4-1.2-1.7-1.4-3-1-4z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="NAVIGATE" data-ar="التنقل">NAVIGATE</h4>
+        <a href="../../home/index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="../../about/index.html" data-en="About" data-ar="من نحن">About</a>
+        <a href="../index.html" data-en="Projects" data-ar="أعمالنا">Projects</a>
+        <a href="../../process/index.html" data-en="Process" data-ar="آلية العمل">Process</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="SERVICES" data-ar="الخدمات">SERVICES</h4>
+        <a href="../../services/index.html" data-en="Business Systems" data-ar="أنظمة إدارة">Business Systems</a>
+        <a href="../../services/index.html" data-en="Websites" data-ar="مواقع إلكترونية">Websites</a>
+        <a href="../../services/index.html" data-en="RTL Dashboards" data-ar="لوحات تحكم عربية">RTL Dashboards</a>
+        <a href="../../services/index.html" data-en="Support" data-ar="الدعم">Support</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="CONTACT" data-ar="تواصل">CONTACT</h4>
+        <a href="https://wa.me/201145466800" target="_blank">+20 114 546 6800</a>
+        <a href="https://web.facebook.com/profile.php?id=61592198713971" target="_blank" data-en="Facebook Page" data-ar="صفحة الفيسبوك">Facebook Page</a>
+        <a href="../../contact/index.html" data-en="Contact Form" data-ar="نموذج التواصل">Contact Form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-en="© 2026 Soft Prime. All rights reserved." data-ar="© 2026 Soft Prime. جميع الحقوق محفوظة.">© 2026 Soft Prime. All rights reserved.</span>
+      <span class="sys-tag">SYS.STATUS <b>● ONLINE</b></span>
+    </div>
+  </div>
+</footer>
+
+<div class="to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+<div class="lightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-stage">
+      <img src="" alt="Proposal Generator screenshot">
+      <button class="lightbox-nav prev" aria-label="Previous"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="lightbox-nav next" aria-label="Next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <span class="lightbox-counter">1 / 5</span>
+    </div>
+    <div class="lightbox-head">
+      <div class="lightbox-thumbs"></div>
+      <button class="lightbox-close" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

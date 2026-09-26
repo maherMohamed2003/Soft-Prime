@@ -312,6 +312,42 @@
     });
   }
 
+  /* ---------------- Live visitor counter (starts at 625, +1 per visit) ---------------- */
+  function initVisitorCounter(){
+    const el = document.getElementById('visitor-count');
+    if(!el) return;
+    const OFFSET = 624; // first global hit (=1) displays as 625
+    const NAMESPACE = 'softprime-portfolio-maher';
+    const KEY = 'home-visits';
+    const LOCAL_KEY = 'sp_local_visits';
+
+    function showLocalFallback(){
+      let val = parseInt(localStorage.getItem(LOCAL_KEY), 10);
+      if(!val || val < 625) val = 624;
+      val += 1;
+      localStorage.setItem(LOCAL_KEY, val);
+      el.textContent = val.toLocaleString('en-US');
+    }
+
+    // Only count once per browser session so refreshes don't inflate it artificially fast
+    if(sessionStorage.getItem('sp_counted_this_session')){
+      // still show the last known value without incrementing again
+      const last = localStorage.getItem(LOCAL_KEY);
+      if(last) el.textContent = (+last).toLocaleString('en-US');
+      return;
+    }
+    sessionStorage.setItem('sp_counted_this_session', '1');
+
+    fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => {
+        const val = OFFSET + (data.value || 0);
+        localStorage.setItem(LOCAL_KEY, val);
+        el.textContent = val.toLocaleString('en-US');
+      })
+      .catch(showLocalFallback);
+  }
+
   document.addEventListener('DOMContentLoaded', ()=>{
     initLangSwitch();
     initNav();
@@ -325,5 +361,6 @@
     initLightbox();
     initPageTransitions();
     initContactForm();
+    initVisitorCounter();
   });
 })();
